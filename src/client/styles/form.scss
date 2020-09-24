@@ -1,0 +1,27 @@
+
+form {
+  // border: 1px solid #545454;
+  // border-radius: 3px;
+  // padding: 3rem 3rem;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  line-height: 16px;
+  padding: 1rem 1rem;
+  border-width: 0px;
+  outline: none;
+}
+
+.sumbit-button {
+  width: 250px;
+  height: auto;
+  margin-left: 1rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
