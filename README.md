@@ -34,4 +34,4 @@ First of all, cd to your project and type `npm install` after cloning.
 
 ## Deploying
 
-[Vercel](https://www.heroku.com/)
+[Vercel](https://evaluate-news-nlp.vercel.app/dist)
