@@ -1,6 +1,5 @@
 var path = require('path')
 const express = require('express')
-const fetch = require('node-fetch')
 let bodyParser = require('body-parser');
 
 const mockAPIResponse = require('./mockAPI.js')
@@ -39,20 +38,6 @@ app.post('/result',(req,res) =>{
     });
 })
 
-return fetch(url,{
-    method: method,
-    body: data,
-}).then(response => {
-    if(response.status >= 200 && response.status < 300) {
-        return response.json();
-    } else {
-        return response.json().then(errData => {
-            console.log(errData);
-            throw new Error('Server went wrong');
-        });
-    }
-});
-
 // designates what port the app will listen to for incoming requests
 app.listen(8080, function () {
     console.log('Server is working on port 8080!')
@@ -61,12 +46,3 @@ app.listen(8080, function () {
 app.get('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
-
-// const nameValues = {
-//     'J+': 'Rich',
-//     'J': 'lively',
-//     'B': 'Friendly',
-//     'N': 'Basketball Star',
-//     'To': 'Play as actor',
-//     'None': 'No Comment'
-// };

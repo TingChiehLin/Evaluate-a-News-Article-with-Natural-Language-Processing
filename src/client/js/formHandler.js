@@ -1,7 +1,4 @@
-import fetch from 'node-fetch';
-import checkForName from './nameChecker';
-
-const submitButton = document.getElementById('evaluate-button');
+//import checkForName from './nameChecker';
 
 //handle request 
 const sendHttpRequest = (method, url='', data) => {
@@ -38,7 +35,7 @@ const handleSubmit = (event) => {
     const userUrl = document.getElementById('user-url').value;
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    Client.checkForName(formText)
+    //Client.checkForName(formText)
     
     console.log("::: Form Submitted :::")
     const data = sendHttpRequest('POST',userUrl);
@@ -51,6 +48,5 @@ const handleSubmit = (event) => {
     // })
 }
 
-submitButton.addEventListener('click',handleSubmit);
 
 export { handleSubmit }
