@@ -9,6 +9,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/client/index.js',
+    output:{
+        libraryTarget: 'var',
+        library: 'Client',
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.min.js'
+    },
     mode: 'production',
     optimization: {
         minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
