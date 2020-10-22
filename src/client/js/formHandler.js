@@ -1,6 +1,8 @@
 import fetch from 'node-fetch';
 import checkForName from './nameChecker';
 
+const submitButton = document.getElementById('evaluate-button');
+
 //handle request 
 const sendHttpRequest = (method, url='', data) => {
     return fetch(url,{
@@ -48,5 +50,7 @@ const handleSubmit = (event) => {
     //     document.getElementById('results').innerHTML = res.message
     // })
 }
+
+submitButton.addEventListener('click',handleSubmit);
 
 export { handleSubmit }
