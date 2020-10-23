@@ -1,4 +1,5 @@
 //import checkForName from './nameChecker';
+const handleSubmitButton = document.getElementById('evaluate-button');
 
 //handle request 
 const sendHttpRequest = (method, url='', data) => {
@@ -34,7 +35,7 @@ const handleSubmit = (event) => {
     document.getElementById('results').innerHTML = '';
     const userUrl = document.getElementById('user-url').value;
     // check what text was put into the form field
-    let formText = document.getElementById('name').value
+    //let formText = document.getElementById('name').value
     //Client.checkForName(formText)
     
     console.log("::: Form Submitted :::")
@@ -48,5 +49,6 @@ const handleSubmit = (event) => {
     // })
 }
 
+handleSubmitButton.addEventListener('click',handleSubmit);
 
 export { handleSubmit }

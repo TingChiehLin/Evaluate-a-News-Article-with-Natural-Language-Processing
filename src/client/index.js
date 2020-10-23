@@ -5,7 +5,9 @@ import './styles/base.scss';
 
 console.log(checkForName);
 
+
 export {
     checkForName,
     handleSubmit
 }
+
