@@ -2,6 +2,9 @@ var path = require('path')
 const express = require('express')
 let bodyParser = require('body-parser');
 
+const cors = require("cors");
+app.use(cors());
+
 const mockAPIResponse = require('./mockAPI.js')
 const application_Key = process.env.API_KEY;
 
